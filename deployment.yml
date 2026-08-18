@@ -17,7 +17,7 @@ spec:
   template:
     metadata:
       labels:
-        app: deploy-template
+        app: deploy
     spec: 
       containers:
         - image: nginx:latest

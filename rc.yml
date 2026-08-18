@@ -11,18 +11,15 @@ spec:
   template:
     metadata:
       labels:
-        app: rc-template
-        labels:
-          app: rc
-  spec:
+        app: rc
+    spec:
     containers:
-      - image: nignx:latest
+      - image: nginx:latest
         name: rc-cont
         ports:
-         - name: nginx-port
-           containerPort: 80
+          - name: nginx-port
+            containerPort: 80
 ---
-spec:
 apiVersion: v1
 kind: Service
 metadata:

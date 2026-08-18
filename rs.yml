@@ -1,5 +1,5 @@
-apiversion: apps/v1
-kind: Replicaset
+apiVersion: apps/v1
+kind: ReplicaSet
 metadata:
   name: my-rs
   labels:
@@ -11,10 +11,8 @@ spec:
       app: rs
   template:
     metadata:
-      lables:
-        app: rs-template
-        labels:
-          app: rs
+      labels:
+        app: rs
     spec: 
       containers:
         - image: nginx:latest
@@ -34,6 +32,5 @@ spec:
   selector:
     app: rs
   ports:
-   - port: 80
-     targetPort: 80
-                        
+    - port: 80
+      targetPort: 80
