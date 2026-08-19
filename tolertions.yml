@@ -11,8 +11,7 @@ spec:
       value: "true"
       effect: "NoSchedule"
   nodeSelector:
-    type: backend
-  
+    type: backends
   containers:
     - image: nginx:latest
       name: my-container
